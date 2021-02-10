@@ -1114,3 +1114,32 @@ a {
 		grid-column: 3/-3;
 	}
 }
+@media (max-width: 600px) {
+	.sm_heading {
+		width: max-content;
+	}
+	.xl_heading {
+		font-size: 60px;
+	}
+	.h_line_right::after {
+		content: none;;
+	}
+	.md_heading {
+		text-align: center;
+	}
+	.h_line_both::before {
+		content: none;
+	}
+	.h_line_both::after {
+		content: none;
+	}
+	.work_wrapper {
+		grid-gap: 28px;
+	}
+	.work_preview {
+		grid-column: 1/-1;
+	}
+	.work_info {
+    grid-column: 13/1;
+	}
+}

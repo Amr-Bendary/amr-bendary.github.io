@@ -16,14 +16,18 @@
     ></script>
     <script>
       let expand = () => {
-        document.querySelector(".links_right").style.display = "flex";
-        document.querySelector("#linksCollapse").style.display = "initial";
-        document.querySelector(".links_right").style.transform = "scale(1)";
+        if (window.innerWidth < 1024) {
+          document.querySelector(".links_right").style.display = "flex";
+          document.querySelector("#linksCollapse").style.display = "initial";
+          document.querySelector(".links_right").style.transform = "scale(1)";
+        }
       };
 
       let collapse = () => {
-        document.querySelector(".links_right").style.display = "none";
-        document.querySelector(".links_right").style.transform = "scale(1)";
+        if (window.innerWidth < 1024) {
+          document.querySelector(".links_right").style.display = "none";
+          document.querySelector(".links_right").style.transform = "scale(1)";
+        }
       };
     </script>
     <title>Amr Bendary</title>
@@ -57,24 +61,22 @@
       <ul class="links_right custom_2 slow_5">
         <button id="linksCollapse" onclick="collapse()">X</button>
         <li>
-          <button id="1" class="contentLink" name=" About Me " data-link>
+          <button id="1" class="contentLink" name=" About Me " onclick="collapse()" data-link>
             <span>01.</span>About
           </button>
         </li>
         <li>
-          <button id="2" class="contentLink" name=" Previous Work " data-link>
+          <button id="2" class="contentLink" name=" Previous Work " onclick="collapse()" data-link>
             <span>02.</span>Work
           </button>
         </li>
         <li>
-          <button id="3" class="contentLink" name=" Contact Me " data-link>
+          <button id="3" class="contentLink" name=" Contact Me " onclick="collapse()" data-link>
             <span>03.</span>Contact
           </button>
         </li>
         <li>
-          <a class="btn" href=" frontend/static/media/Amr Bendary's resume.pdf"
-            >Resume</a
-          >
+          <a class="btn" href="frontend/static/ Bendary's resume.pdf">Resume</a>
         </li>
       </ul>
     </nav>

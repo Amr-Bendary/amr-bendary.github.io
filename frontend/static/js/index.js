@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         pages[e.target.id].classList.add("active");
       }
       pagesIndex = e.target.id;
+      hideFooter();
+      popupDismiss();
     }
   });
 
@@ -103,19 +105,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(function () {
       PopUp();
-    }, 2000); // 1000 to load it after 1 second from page load
+    }, 2000);
 
+    let popupDismiss = () => {
+      document.getElementById("nav_top").classList.remove("blurry");
+      document.querySelector(".popup").classList.remove("popup_view");
+      let toBeBlurry = document.querySelector("#popup").nextElementSibling;
+      while (toBeBlurry) {
+        toBeBlurry = toBeBlurry.nextElementSibling;
+        toBeBlurry.classList.remove("blurry");
+      }
+    }
     document
       .querySelector("#popup_dismiss")
-      .addEventListener("click", function () {
-        document.getElementById("nav_top").classList.remove("blurry");
-        document.querySelector(".popup").classList.remove("popup_view");
-        let toBeBlurry = document.querySelector("#popup").nextElementSibling;
-        while (toBeBlurry) {
-          toBeBlurry = toBeBlurry.nextElementSibling;
-          toBeBlurry.classList.remove("blurry");
-        }
-      });
+      .addEventListener("click", popupDismiss());
     localStorage.setItem("myPopup", "true");
   }
 });
