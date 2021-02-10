@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
   var poppy = localStorage.getItem("myPopup");
 
-  if (poppy /* && window.innerWidth > 1024 */) {
+  if (!poppy /* && window.innerWidth > 1024 */) {
     function PopUp() {
       document.querySelector("#popup").classList.add("popup_view");
       let toBeBlurry = document.querySelector("#popup").nextElementSibling;
