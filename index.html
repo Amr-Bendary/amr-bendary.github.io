@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="static/css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Mono&family=Roboto:wght@300;400;700&family=Tajawal&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b5b25e6c94.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let expand = () => {
+        document.querySelector(".links_right").style.display = "flex";
+        document.querySelector("#linksCollapse").style.display = "initial";
+        document.querySelector(".links_right").style.transform = "scale(1)";
+      };
+
+      let collapse = () => {
+        document.querySelector(".links_right").style.display = "none";
+        document.querySelector(".links_right").style.transform = "scale(1)";
+      };
+    </script>
+    <title>Amr Bendary</title>
+  </head>
+
+  <body>
+    <div id="popup" class="popup">
+      <h2 class="md_heading">Feel free to navigate using</h2>
+      <div class="popup_wrapper">
+        <div class="arrows">
+          <img id="arrows" src="static/media/left-right.svg" alt="" />
+          <p>Left & Right to switch between pages</p>
+        </div>
+        <div class="arrows">
+          <img id="arrows" src="static/media/up-down.svg" alt="" />
+          <p>Up & Down arrows to switch between projects [ Work Page ]</p>
+        </div>
+      </div>
+      <button id="popup_dismiss" class="btn">X</button>
+    </div>
+    <nav id="nav_top" class="nav_top downwards">
+      <button
+        id="0"
+        name=" Amr Bendary "
+        class="logo downwards slow_5"
+        data-link
+      >
+        A
+      </button>
+      <button class="logo" id="linksExpand" onclick="expand()">=</button>
+      <ul class="links_right custom_2 slow_5">
+        <button id="linksCollapse" onclick="collapse()">X</button>
+        <li>
+          <button id="1" class="contentLink" name=" About Me " data-link>
+            <span>01.</span>About
+          </button>
+        </li>
+        <li>
+          <button id="2" class="contentLink" name=" Previous Work " data-link>
+            <span>02.</span>Work
+          </button>
+        </li>
+        <li>
+          <button id="3" class="contentLink" name=" Contact Me " data-link>
+            <span>03.</span>Contact
+          </button>
+        </li>
+        <li>
+          <a class="btn" href=" static/media/Amr Bendary 's resume.pdf"
+            >Resume</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div id="footer" class="side_left custom_6">
+      <ul class="social_links">
+        <li>
+          <a href="https://www.github.com/amr-bendary" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <div class="tooltip">My GitHub Profile</div>
+        </li>
+        <li>
+          <a href="https://www.hackerrank.com/amr_bendary" target="_blank"
+            ><i class="fab fa-hackerrank"></i
+          ></a>
+          <div class="tooltip">My HackerRank Profile</div>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/amr-bendary" target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <div class="tooltip">My LinkedIn Profile</div>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/_amr_bendary" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <div class="tooltip">My Twitter Profile</div>
+        </li>
+        <div class="vertical_line"></div>
+      </ul>
+    </div>
+
+    <div class="side_right upwards">
+      <div class="wrapper">
+        <a href="mailto:amr.bendry.business@gmail.com?subject=Wanna Hire You!"
+          >amr.bendary.business@gmail.com</a
+        >
+        <div class="vertical_line"></div>
+      </div>
+    </div>
+
+    <div id="content">
+      <!---------------------- Home page ---------------------->
+      <div class="page flex active" id="Amr Bendary">
+        <p class="sm_heading custom_1 slow_1">Hi, my name is.</p>
+        <h1 class="xl_heading custom_3 slow_3">
+          Amr Bendary<br /><span>I' m a front-end developer.</span>
+        </h1>
+        <p class="normal_text to_right slow_5">
+          Building websites may be a challenge, but I am up for any challenge. I
+          am a <span class="special">Front-End</span> developer based in
+          <span class="special">Egypt</span> specializing in building
+          exceptional websites, applications.
+        </p>
+        <a
+          class="btn to_left"
+          href="mailto:amr.bendary.business@gmail.com?subject=Wanna Hire You!"
+          >Get in touch</a
+        >
+      </div>
+
+      <!---------------------- About page ---------------------->
+      <div class="page flex" id="About Me">
+        <div class="about_wrapper">
+          <div class="about_info to_right">
+            <h2 class="md_heading h_line_right custom_3 slow_3">
+              <span>01. </span> About Me
+            </h2>
+            <p class="to_right slow_1">
+              Hello! I'm Amr, a front-end developer based in Egypt.
+            </p>
+            <p class="to_right slow_3">
+              I love creating websites using
+              <span class="special">JavaScript</span> in general, and in Angular
+              specifically. My goal is to always build products that provide
+              pixel-perfect, performant experiences.
+            </p>
+            <p class="to_right slow_5">
+              I graduated in <span class="special">June.2019</span> and worked
+              on many personal projects for pracrice. I've just finished the
+              military service <span class="special">Dec.2020</span> and I'm now
+              open for any opportunity that will make the best use of my skills
+              an give me the experiences that I need.
+            </p>
+            <p class="to_left">
+              Here are a few technologies I've been using recently:
+            </p>
+            <ul class="skills">
+              <li class="to_right">JavaScript (ES6+)</li>
+              <li class="to_left slow_1">HTML & CSS</li>
+              <li class="to_right slow_2">Bootstrap</li>
+              <li class="to_left slow_3">TypeScript</li>
+              <li class="to_right slow_4">Angular</li>
+              <li class="to_left slow_5">Node.js</li>
+            </ul>
+          </div>
+          <div class="about_pic outline_right downwards">
+            <img src="static/media/My-Pic.jpg" alt="Amr Bendary's Picture" />
+          </div>
+        </div>
+      </div>
+
+      <!---------------------- Work page ---------------------->
+      <div class="page flex" id="Previous Work">
+        <div id="works">
+          <div id="work" class="work_wrapper visible">
+            <div class="work_preview to_right">
+              <a
+                class="outline_left"
+                target="_blank"
+                href="static/html/Coming-Soon.html"
+                ><img src="static/media/Coming-Soon.jpg" alt="Coming Soon!"
+              /></a>
+            </div>
+            <div class="work_info to_left">
+              <p class="xs_heading to_left">Personal Project</p>
+              <p class="md_heading to_right">Project Num One</p>
+              <p class="normal_text to_left">
+                I'm always developing new websites for practice, and I'm not a
+                designer so I used to download free designs as PSD templates
+                from [ <span class="special">freepic.com</span>,
+                <span class="special">freebiesbug.com</span>...etc ] and start
+                working on them so they become awesome like this one. Feel free
+                to take a closer look at the porject using the links below.
+              </p>
+              <ul class="project_used_skills to_right slow_3">
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+              </ul>
+              <ul class="project_preview to_right slow_5">
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="work" class="work_wrapper">
+            <div class="work_preview grid_right to_right">
+              <a
+                class="outline_right"
+                target="_blank"
+                href="static/html/Coming-Soon.html"
+                ><img src="static/media/Coming-Soon.jpg" alt="Coming Soon!"
+              /></a>
+            </div>
+            <div class="work_info grid_left to_left">
+              <p class="xs_heading">Personal Project</p>
+              <p class="md_heading">Project Num Two</p>
+              <p class="normal_text">
+                I'm always developing new websites for practice, and I'm not a
+                designer so I used to download free designs as PSD templates
+                from [ <span class="special">freepic.com</span>,
+                <span class="special">freebiesbug.com</span>...etc ] and start
+                working on them so they become awesome like this one. Feel free
+                to take a closer look at the porject using the links below.
+              </p>
+              <ul class="project_used_skills to_right slow_3">
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+              </ul>
+              <ul class="project_preview to_right slow_5">
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="work" class="work_wrapper">
+            <div class="work_preview to_right">
+              <a
+                class="outline_left"
+                target="_blank"
+                href="static/html/Coming-Soon.html"
+                ><img src="static/media/Coming-Soon.jpg" alt="Coming Soon!"
+              /></a>
+            </div>
+            <div class="work_info to_left">
+              <p class="xs_heading">Personal Project</p>
+              <p class="md_heading">Project Num Three</p>
+              <p class="normal_text">
+                I'm always developing new websites for practice, and I'm not a
+                designer so I used to download free designs as PSD templates
+                from [ <span class="special">freepic.com</span>,
+                <span class="special">freebiesbug.com</span>...etc ] and start
+                working on them so they become awesome like this one. Feel free
+                to take a closer look at the porject using the links below.
+              </p>
+              <ul class="project_used_skills to_right slow_3">
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+              </ul>
+              <ul class="project_preview to_right slow_5">
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="static/html/Coming-Soon.html" target="_blank"
+                    ><i class="fas fa-external-link-alt"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---------------------- Contact page ---------------------->
+      <div class="page flex" id="Contact Me">
+        <div class="contact_wrapper">
+          <p class="sm_heading h_line_both custom_5">03. So What's next?</p>
+          <h2 class="lg_heading to_right">Get in touch</h2>
+          <p class="normal_text to_left slow_2">
+            I'm currently looking for any new opportunities to put my skills to
+            good use and develop them even further, my inbox is always open.<br />Whether
+            you're interested in recruiting me, have a question, or just want to
+            say hi, I'll get back to you ASAP!
+          </p>
+          <a
+            class="btn upwards slow_4"
+            href="mailto:amr.bendary.business@gmail.com?subject=Wanna Hire You!"
+            >Say Hi!</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="static/js/index.js"></script>
+  </body>
+</html>
