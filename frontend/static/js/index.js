@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
       pages[i].classList.remove("active");
       pages[pagesIndex].classList.add("active");
     }
+		document.getElementById("nav_top").scrollIntoView();
   };
 
   let nextProject = () => {
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   (function () {
     if (window.innerWidth < 1025 && window.innerHeight < 1025) {
       document.querySelector(".links_right").style.transform = "scale(0)";
+			document.getElementById("to_change_on_mobile").textContent = "Swipe left and right to change page";
     }
 		if (window.innerWidth < 1025) {
       document.querySelector(".links_right").classList.remove("custom_2", "slow_5");
@@ -92,10 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
       hideFooter();
     }
   };
-
+	document.addEventListener('swiped-down', function(e) {
+    console.log(e.target); // the element that was swiped
+});
   var poppy = localStorage.getItem("myPopup");
 
-  if (!poppy && window.innerWidth > 1024) {
+  if (poppy /* && window.innerWidth > 1024 */) {
     function PopUp() {
       document.querySelector("#popup").classList.add("popup_view");
       let toBeBlurry = document.querySelector("#popup").nextElementSibling;
@@ -123,4 +127,38 @@ document.addEventListener("DOMContentLoaded", () => {
       .addEventListener("click", popupDismiss);
     localStorage.setItem("myPopup", "true");
   }
+
+	// Swipe to change content for smartphones
+	var touchstartX = 0;
+	var touchstartY = 0;
+	var touchendX = 0;
+	var touchendY = 0;
+	
+	var gesuredZone = document.getElementById('content');
+	
+	gesuredZone.addEventListener('touchstart', function(event) {
+			touchstartX = event.changedTouches[0].screenX;
+			touchstartY = event.changedTouches[0].screenY;
+	}, false);
+	
+	gesuredZone.addEventListener('touchend', function(event) {
+			touchendX = event.changedTouches[0].screenX;
+			touchendY = event.changedTouches[0].screenY;
+			handleGesure();
+	}, false); 
+	
+	function handleGesure() {
+			var swiped = 'swiped: ';
+			if (touchendX < touchstartX && Math.abs(touchstartY - touchendY) < Math.abs(touchstartX - touchendX)) {
+				nextPage();
+				hideFooter();
+			}
+			if (touchendX > touchstartX && Math.abs(touchstartY - touchendY) < Math.abs(touchstartX - touchendX)) {
+				prevPage();
+				hideFooter();
+			}
+	}
+
+
+
 });

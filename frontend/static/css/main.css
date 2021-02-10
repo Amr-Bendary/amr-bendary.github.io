@@ -925,7 +925,9 @@ a {
 .popup #arrows {
 	width: 220px;
 }
-
+.variable {
+	display: none;
+}
 #popup_dismiss {
 	width: 1.5em !important;
 	border-radius: 999px;
@@ -984,12 +986,30 @@ a {
 
 /* ********** **********  Responsive  ********** ********** */
 
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 	html {
 		overflow: scroll;
 		overflow-x: hidden;
 	}
 
+	.popup_wrapper {
+		flex-direction: column;
+		transform: translateY(50px);
+	}
+	.popup .md_heading {
+		margin: 0;
+	}
+	.arrows:first-of-type {
+		display: none;
+	}
+	.popup #arrows {
+		display: none;
+		width: 120px;
+		height: 120px;
+	}
+	.variable {
+		display: initial !important;
+	}
 	#content {
 		padding: 0 4%;
 	}
