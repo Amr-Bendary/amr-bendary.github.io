@@ -762,6 +762,7 @@ a {
 	transform: translateY(-500px) scale(0.5);
 	opacity: 0;
 	display: none;
+	overflow: visible;
 }
 
 .visible {
@@ -1101,7 +1102,7 @@ a {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		transform: translateY(300px);
+		transform: translateY(400px);
 	}
 	.about_info {
 		margin: 60px 0;
@@ -1117,9 +1118,10 @@ a {
 @media (max-width: 600px) {
 	.sm_heading {
 		width: max-content;
+		margin-bottom: 1em;
 	}
 	.xl_heading {
-		font-size: 60px;
+		font-size: 40px;
 	}
 	.h_line_right::after {
 		content: none;;

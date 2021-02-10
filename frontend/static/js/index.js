@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   let changePage = () => {
+		document.title = pages[pagesIndex].id;
     for (let i = 0; i < pages.length; i++) {
       pages[i].classList.remove("active");
       pages[pagesIndex].classList.add("active");
     }
-    document.title = pages[pagesIndex].id;
   };
 
   let nextProject = () => {
@@ -59,18 +59,20 @@ document.addEventListener("DOMContentLoaded", () => {
     changePage();
   };
   (function () {
-    if (window.innerWidth < 769) {
-      document.querySelector(".links_right").classList.remove("custom_2", "slow_5");
+    if (window.innerWidth < 1025 && window.innerHeight < 1025) {
       document.querySelector(".links_right").style.transform = "scale(0)";
     }
+		if (window.innerWidth < 1025) {
+      document.querySelector(".links_right").classList.remove("custom_2", "slow_5");
+		}
   })();
   let hideFooter = () => {
     if (
-      window.innerWidth < 1024 &&
-      (document.title === "Previous Work" || document.title === "About Me")
+      window.innerWidth < 1025 &&
+      (document.title === "About Me" || document.title === "Previous Work")
     ) {
       document.getElementById("footer").style.display = "none";
-    } else {
+    } else if (document.title === "Amr Bendary" || document.title === "Contact Me"){
       document.getElementById("footer").style.display = "initial";
     }
   };
@@ -86,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       nextPage();
       hideFooter();
     } else if (keycode === 37) {
-      prevPage();
+			prevPage();
       hideFooter();
     }
   };
@@ -118,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     document
       .querySelector("#popup_dismiss")
-      .addEventListener("click", popupDismiss());
+      .addEventListener("click", popupDismiss);
     localStorage.setItem("myPopup", "true");
   }
 });
