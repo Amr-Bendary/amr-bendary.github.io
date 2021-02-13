@@ -311,6 +311,9 @@ p {
 p>.special {
 	color: var(--text-dark-primary);
 }
+.special a {
+	color: var(--text-dark-primary);
+}
 
 a {
 	text-decoration: none;
